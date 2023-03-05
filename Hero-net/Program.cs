@@ -3,6 +3,7 @@ using Hero_net.Service;
 using Hero_net.Service.Imp; //Everything using Models folder
 
 var builder = WebApplication.CreateBuilder(args);
+ConfigureServices(builder.Services);
 
 // Add services to the container.
 
@@ -31,3 +32,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+void ConfigureServices(IServiceCollection services)
+{
+}

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hero-net", "Hero-net\Hero-net.csproj", "{66932168-4DE2-4A02-BA45-48281B220CD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hero_UnitTest", "Hero_UnitTest\Hero_UnitTest.csproj", "{4440772A-4C62-4418-9860-296364678167}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{66932168-4DE2-4A02-BA45-48281B220CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66932168-4DE2-4A02-BA45-48281B220CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66932168-4DE2-4A02-BA45-48281B220CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4440772A-4C62-4418-9860-296364678167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4440772A-4C62-4418-9860-296364678167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4440772A-4C62-4418-9860-296364678167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4440772A-4C62-4418-9860-296364678167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
