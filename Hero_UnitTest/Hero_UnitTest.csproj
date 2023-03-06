@@ -27,4 +27,36 @@
       <ProjectReference Include="..\Hero-net\Hero-net.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Folder Include="Service\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Service\TestData.json" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Update="algorithmData.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Service\TestData.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Service\TestData.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Service\TestData.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+    </ItemGroup>
 </Project>

@@ -38,7 +38,7 @@ public class TestCharacterController
         var mockUsersService = new Mock<ICharacterService>();
         mockUsersService.Setup(service => service
                 .GetAllCharacters())
-            .ReturnsAsync(CharacterFixture.GetCharacters);
+            .ReturnsAsync(new ServiceResponse<List<GetCharacterDto>>());
         
         var sut = new CharacterController(mockUsersService.Object);
         
@@ -47,11 +47,13 @@ public class TestCharacterController
 
         // Assert
         mockUsersService.Verify(service => service
-            .GetAllCharacters(), Times.Once);
+            .GetAllCharacters(), Times.Once); 
+        //check if the method is called once
+        //if it is called more than once, the test will fail
     }
     
     [Fact]
-    public async Task Get_OnSuccess_ReturnListOfUsers()
+    public async Task Get_OnSuccess_ReturnListOfCharacters()
     {
         // Arrange
         var mockUsersService = new Mock<ICharacterService>();

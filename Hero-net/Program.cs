@@ -1,4 +1,5 @@
 global using Hero_net.Models;
+using Hero_net.Repository;
 using Hero_net.Service;
 using Hero_net.Service.Imp; //Everything using Models folder
 
@@ -35,4 +36,6 @@ app.Run();
 
 void ConfigureServices(IServiceCollection services)
 {
+    services.AddTransient<ICourseService, CourseService>();
+    services.AddTransient<ICourseRepository, CourseRepository>();
 }

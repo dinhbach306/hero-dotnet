@@ -11,7 +11,7 @@ public static class CharacterFixture
             new()
             {
                 Id = 1,
-                Name = "Nam",
+                Name = "David",
                 HitPoints = 100,
                 Strength = 10,
                 Defense = 10,
@@ -21,7 +21,7 @@ public static class CharacterFixture
             new()
             {
                 Id = 2,
-                Name = "Nam",
+                Name = "Magnus",
                 HitPoints = 100,
                 Strength = 10,
                 Defense = 10,

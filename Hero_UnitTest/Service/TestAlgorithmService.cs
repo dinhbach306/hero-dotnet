@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+﻿using Hero_net.helpper;
 using Hero_net.Models;
 using Hero_UnitTest.Helpers;
 
@@ -21,8 +21,21 @@ public class TestAlgorithmService
         Assert.Equal(expected, algorithmService.RemoveDuplicates(nums));
     }
     
+    [Theory]
+    [JsonFileData("algorithmData.json", "LargestNumberV2")]
+    public void LargestNumberV2(int[] nums, string expected)
+    {
+        // Arrange
+        var algorithmService = new Algorithm();
+
+        // Act
+        var result = algorithmService.LargestNumber(nums);
+        
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
     [Fact]
-    // [ClassData(typeof(DataFixture.LargestNumberData))]
     public void LargestNumber()
     {
         // Arrange
@@ -34,4 +47,6 @@ public class TestAlgorithmService
         // Assert
         Assert.Equal("9534330",result);
     }
+    
+    
 }
