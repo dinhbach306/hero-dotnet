@@ -1,4 +1,5 @@
-﻿using Hero_net.helpper;
+﻿using FluentAssertions;
+using Hero_net.helpper;
 using Hero_net.Models;
 using Hero_UnitTest.Helpers;
 
@@ -6,7 +7,6 @@ namespace Hero_UnitTest.Service;
 
 public class TestAlgorithmService
 {
-    
     [Theory]
     [ClassData(typeof(DataFixture.RemoveDuplicateData))]
     public void RemoveDuplicate(int[] nums, int expected)
@@ -22,14 +22,14 @@ public class TestAlgorithmService
     }
     
     [Theory]
-    [JsonFileData("algorithmData.json", "LargestNumberV2")]
-    public void LargestNumberV2(int[] nums, string expected)
+    [JsonFileData("algorithmData.json", "SelectionSort")]
+    public void SortSelection(int[] nums, int[] expected)
     {
         // Arrange
         var algorithmService = new Algorithm();
 
         // Act
-        var result = algorithmService.LargestNumber(nums);
+        var result = algorithmService.SortSelection(nums);
         
         // Assert
         Assert.Equal(expected, result);
@@ -47,6 +47,4 @@ public class TestAlgorithmService
         // Assert
         Assert.Equal("9534330",result);
     }
-    
-    
 }
