@@ -7,7 +7,7 @@ using Hero_UnitTest.Fixtures;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace Hero_UnitTest.Systems.Controllers;
+namespace Hero_UnitTest.Controllers;
 
 public class TestCharacterController
 {
